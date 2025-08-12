@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+    <title>Score</title>
+</head>
+<body>
+    <!-- Construire un tableau de score-->
+   <div class="nom"> <h1>Score</h1> </div>
+    <div class="container">
+        <div class="container-players">
+            <div class="player1">
+                <h2><input type="text" placeholder="Nom du joueur 1"></h2>
+                <p>
+                    Point: <span class="score">
+                        <input type="number" id="score1">
+                        <button onclick="increaseScore('score1')">&#8593;</button>
+                        <button onclick="decreaseScore('score1')">&#8595;</button>
+                    </span>
+                </p>
+            </div>
+
+            <div class="player2">
+                <h2><input type="text" placeholder="Nom du joueur 2"></h2>
+                <p>
+                    Point:
+                     <span class="score">
+                        <input type="number" id="score2">
+                        <button onclick="increaseScore('score2')">&#8593;</button>
+                        <button onclick="decreaseScore('score2')">&#8595;</button>
+                    </span>
+                </p>
+            </div>
+        </div>
+    </div>
+
+    <div class="timer">
+        <label for="userTime">Durée</label>
+        <input type="number" id="userTime" min="1" value="60" style="width:60px;">
+        <button onclick="startCountdown()">Démarrer</button>
+        <div id="timer">
+            Temps restant : <span id="countdown">-</span> s
+        </div>
+        <div class="stop">
+            <button onclick="stopCountdown()">Arrêter</button>
+        </div>
+    </div>
+
+</body>
+</html>
